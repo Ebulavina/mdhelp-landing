@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "babel": "6.23.0",
-    "blendid": "4.2.0",
+    "blendid": "4.4.3",
     "gsap": "1.19.1",
     "jquery": "3.2.1",
     "scrollmagic": "2.0.5"
