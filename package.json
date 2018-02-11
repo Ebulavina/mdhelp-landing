@@ -1,10 +1,78 @@
 {
-  "name": "mdhelp-landing",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:Ebulavina/mdhelp-landing.git",
-  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "blendid-karma -- --single-run",
+    "build": "blendid -- build",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern config  --ignore-pattern src/javascripts/__tests__/example.test.js",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:css": "sass-lint -c .sass-lint.yml 'src/stylesheets/**/*.sass' -v -q --ignore 'src/stylesheets/base/*.sass'"
+  },
   "dependencies": {
-    "blendid": "4.4.3"
+    "babel": "6.23.0",
+    "blendid": "4.2.0",
+    "gsap": "1.19.1",
+    "jquery": "3.2.1",
+    "scrollmagic": "2.0.5"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-plugin-import": "2.3.0",
+    "sass-lint": "1.10.2"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "window": true,
+      "document": true,
+      "pageYOffset": true,
+      "refresh": true
+    },
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "import/imports-first": 0,
+      "import/newline-after-import": 0,
+      "import/no-dynamic-require": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-named-as-default": 0,
+      "import/no-unresolved": 2,
+      "import/prefer-default-export": 0,
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "max-len": 0,
+      "newline-per-chained-call": 0,
+      "no-console": 1,
+      "no-use-before-define": 0,
+      "no-new": 0,
+      "class-methods-use-this": 0,
+      "prefer-arrow-callback": 0,
+      "func-names": 0,
+      "space-before-function-paren": 0,
+      "global-require": 0,
+      "no-path-concat": 0,
+      "prefer-template": 0,
+      "no-undef": 0,
+      "no-mixed-operators": 0
+    }
   }
 }
