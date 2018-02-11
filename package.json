@@ -9,11 +9,7 @@
     "lint:css": "sass-lint -c .sass-lint.yml 'src/stylesheets/**/*.sass' -v -q --ignore 'src/stylesheets/base/*.sass'"
   },
   "dependencies": {
-    "babel": "6.23.0",
-    "blendid": "4.4.3",
-    "gsap": "1.19.1",
-    "jquery": "3.2.1",
-    "scrollmagic": "2.0.5"
+    "blendid": "4.4.3"
   },
   "devDependencies": {
     "eslint": "3.19.0",
